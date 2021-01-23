@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #224558;
+    width: 100vw;
+    padding: 2vw;
+
+    h1 {
+      font-size: 3vw;
+      color: #fff;
+      @media (min-width: 0px) and (max-width: 991px) {
+        font-size: 6vw;
+      }
+    }
+
+    img {
+      width: 5vw;
+      height: 5vw;
+      @media (min-width: 0px) and (max-width: 991px) {
+        display: none;
+      }
+    }
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 0px) and (max-width: 991px) {
+      flex-direction: column-reverse;
+    }
+
+    .table__wrapper,
+    form {
+      background-color: rgba(255, 255, 255, 0.3);
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      text-align: left;
+      font-size: 2vw;
+      width: 100%;
+      height: 100vh;
+
+      padding: 1vw 2vw;
+
+      @media (min-width: 0px) and (max-width: 991px) {
+        font-size: 6vw;
+      }
+
+      h3 {
+        padding: 3vw;
+      }
+
+      div.input {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          transition: 0.4s;
+        }
+
+        input {
+          max-height: 10vw;
+          font-size: 1.5vw;
+          padding: 1vh;
+          @media (min-width: 0px) and (max-width: 991px) {
+            font-size: 7vw;
+            padding: 3vh;
+            width: 90%;
+          }
+        }
+
+        input ~ label {
+          position: absolute;
+          top: 16px;
+          left: 0;
+
+          color: rgba(255, 255, 255, 0.6);
+
+          transition: 0.4s;
+        }
+
+        input:focus:invalid {
+          border: 2px solid #41a5bb;
+        }
+
+        input.error {
+          display: flex;
+        }
+
+        input.error.active {
+          border: 1px solid red;
+          background-color: rgba(255, 0, 0, 0.2);
+        }
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 17vw;
+        max-height: 10vw;
+        font-size: 1.5vw;
+        padding: 1vh;
+        background-color: #f05e5c;
+        margin: 3vw;
+        @media (min-width: 0px) and (max-width: 991px) {
+          font-size: 7vw;
+          padding: 3vh;
+          width: 90%;
+          margin: 10vw;
+        }
+        &:hover {
+          background-color: #c25151;
+        }
+      }
+    }
+
+    nav {
+      background-color: #222222;
+      width: 10vw;
+      height: 100vh;
+      @media (min-width: 0px) and (max-width: 991px) {
+        text-align: center;
+        width: 100%;
+        height: 10vh;
+      }
+
+      ul {
+        background-color: #222222;
+
+        list-style: none;
+        width: 100%;
+
+        li {
+          a {
+            display: block;
+            text-decoration: none;
+            padding: 2vw 1vw;
+            color: white;
+
+            &:hover {
+              background-color: #3296af;
+            }
+          }
+        }
+      }
+    }
+
+    .table__wrapper {
+      line-height: 1.25;
+      overflow-y: scroll;
+
+      table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      table caption {
+        font-size: 1.5em;
+        margin: 0.5em 0 0.75em;
+      }
+
+      table tr {
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        padding: 0.35em;
+      }
+
+      table th,
+      table td {
+        padding: 0.625em;
+        text-align: center;
+        overflow-x: hidden;
+        font-size: 1.5vw;
+      }
+
+      table th {
+        font-size: 0.85em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      @media screen and (max-width: 600px) {
+        table {
+          border: 0;
+        }
+
+        table caption {
+          font-size: 1.3em;
+        }
+
+        table thead {
+          border: none;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+
+        table tr {
+          border-bottom: 3px solid #ddd;
+          display: block;
+          margin-bottom: 0.625em;
+        }
+
+        table td {
+          border-bottom: 1px solid #ddd;
+          display: block;
+          font-size: 0.8em;
+          text-align: right;
+        }
+
+        table td::before {
+          /*
+          * aria-label has no advantage, it won't be read inside a table
+          content: attr(aria-label);
+          */
+          content: attr(data-label);
+          float: left;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+
+        table td:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  footer {
+    background-color: #224558;
+    padding: 1vw;
+    text-align: center;
+
+    p {
+      font-size: 0.7vw;
+      color: white;
+      @media (min-width: 0px) and (max-width: 991px) {
+        font-size: 2vw;
+      }
+    }
+  }
+}

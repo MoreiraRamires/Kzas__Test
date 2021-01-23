@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #224558;
+  width: 100vw;
+  padding: 2vw;
+}
+
+body header h1 {
+  font-size: 3vw;
+  color: #fff;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+  body header h1 {
+    font-size: 6vw;
+  }
+}
+
+body header img {
+  width: 5vw;
+  height: 5vw;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+  body header img {
+    display: none;
+  }
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+  body main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+body main .table__wrapper,
+body main form {
+  background-color: rgba(255, 255, 255, 0.3);
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  font-size: 2vw;
+  width: 100%;
+  height: 100vh;
+  padding: 1vw 2vw;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+  body main .table__wrapper,
+  body main form {
+    font-size: 6vw;
+  }
+}
+
+body main .table__wrapper h3,
+body main form h3 {
+  padding: 3vw;
+}
+
+body main .table__wrapper div.input,
+body main form div.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .table__wrapper div.input label,
+body main form div.input label {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+body main .table__wrapper div.input input,
+body main form div.input input {
+  max-height: 10vw;
+  font-size: 1.5vw;
+  padding: 1vh;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+  body main .table__wrapper div.input input,
+  body main form div.input input {
+    font-size: 7vw;
+    padding: 3vh;
+    width: 90%;
+  }
+}
+
+body main .table__wrapper div.input input ~ label,
+body main form div.input input ~ label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+body main .table__wrapper div.input input:focus:invalid,
+body main form div.input input:focus:invalid {
+  border: 2px solid #41a5bb;
+}
+
+body main .table__wrapper div.input input.error,
+body main form div.input input.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .table__wrapper div.input input.error.active,
+body main form div.input input.error.active {
+  border: 1px solid red;
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+body main .table__wrapper button,
+body main form button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 17vw;
+  max-height: 10vw;
+  font-size: 1.5vw;
+  padding: 1vh;
+  background-color: #f05e5c;
+  margin: 3vw;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+  body main .table__wrapper button,
+  body main form button {
+    font-size: 7vw;
+    padding: 3vh;
+    width: 90%;
+    margin: 10vw;
+  }
+}
+
+body main .table__wrapper button:hover,
+body main form button:hover {
+  background-color: #c25151;
+}
+
+body main nav {
+  background-color: #222222;
+  width: 10vw;
+  height: 100vh;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+  body main nav {
+    text-align: center;
+    width: 100%;
+    height: 10vh;
+  }
+}
+
+body main nav ul {
+  background-color: #222222;
+  list-style: none;
+  width: 100%;
+}
+
+body main nav ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 2vw 1vw;
+  color: white;
+}
+
+body main nav ul li a:hover {
+  background-color: #3296af;
+}
+
+body main .table__wrapper {
+  line-height: 1.25;
+  overflow-y: scroll;
+}
+
+body main .table__wrapper table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+body main .table__wrapper table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+
+body main .table__wrapper table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+
+body main .table__wrapper table th,
+body main .table__wrapper table td {
+  padding: 0.625em;
+  text-align: center;
+  overflow-x: hidden;
+  font-size: 1.5vw;
+}
+
+body main .table__wrapper table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  body main .table__wrapper table {
+    border: 0;
+  }
+  body main .table__wrapper table caption {
+    font-size: 1.3em;
+  }
+  body main .table__wrapper table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  body main .table__wrapper table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+  body main .table__wrapper table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+  body main .table__wrapper table td::before {
+    /*
+          * aria-label has no advantage, it won't be read inside a table
+          content: attr(aria-label);
+          */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  body main .table__wrapper table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+body footer {
+  background-color: #224558;
+  padding: 1vw;
+  text-align: center;
+}
+
+body footer p {
+  font-size: 0.7vw;
+  color: white;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+  body footer p {
+    font-size: 2vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */

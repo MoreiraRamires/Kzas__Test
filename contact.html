@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="shortcut icon" href="./assets/icons/favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>RH - Lista de Funcionários</title>
+
+</head>
+
+<body>
+
+  <header>
+    <img src="https://kzas.ai/dist/img/logo-kzas-horizontal-color.49acd84.svg" alt="" srcset="">
+    <h1>Painel Adm - Recursos Humanos</h1>
+  </header>
+
+  <main>
+    <button type="submit" id="btnSend" style="display: none; "></button>
+
+    <div class="table__wrapper animate__animated animate__backInLeft">
+
+      <!-- contactList -->
+      <table id="contactList ">
+        <caption>Lista de Funcionários</caption>
+        <thead>
+          <tr>
+            <th scope="col">Nome Completo</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">E-mail</th>
+          </tr>
+        </thead>
+
+        <tbody id='tbody'>
+          <tr>
+            <td data-label="Nome Completo"></td>
+            <td data-label="CPF"></td>
+            <td data-label="Telefone"></td>
+            <td data-label="Email"></td>
+          </tr>
+          <tr>
+            <td data-label="Nome Completo"></td>
+            <td data-label="CPF"></td>
+            <td data-label="Telefone"></td>
+            <td data-label="Email"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <nav>
+      <ul>
+        <li> <a href="./index.html">Cadastro Simplificado de Funcionário</a></li>
+        <li> <a href="./contact.html"> Lista de Funcionários</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer>
+    <p class="animate__animated animate__bounce">Desenvolvido por: Rafael Ramires</p>
+  </footer>
+  <script src="./scripts/bussinesLogic.js"></script>
+  <script src="./scripts/uiLogic.js"></script>
+
+</body>
+
+</html>

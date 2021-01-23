@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="shortcut icon" href="./assets/icons/favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>RH - Cadastro Simplifcado de Funcionários </title>
+
+</head>
+
+<body>
+
+  <header>
+    <img src="https://kzas.ai/dist/img/logo-kzas-horizontal-color.49acd84.svg" alt="" srcset="">
+    <h1>Painel Adm - Recursos Humanos</h1>
+  </header>
+
+  <main>
+
+
+    <form name='addForm' method="post" class="animate__animated animate__backInDown">
+      <h3> Cadastro Simplificado de Funcionários</h3>
+
+      <div class="input">
+        <label for="name"> Nome Completo</label>
+        <input type="text" class="error" name="name" id="name" placeholder="Nome" required>
+
+      </div>
+
+      <div class="input">
+        <label for="email"> Email</label>
+        <input type="email" class="error" name="email" id="email" placeholder="Email corporativo" required>
+
+      </div>
+
+      <div class="input">
+        <label for="cpf">CPF</label>
+        <input type="number" class="error" name="cpf" id="cpf" placeholder="Apenas números" required>
+
+      </div>
+
+      <div class="input">
+        <label for="phone"> Telefone</label>
+        <input class="error" type="number" name="phone" id="phone" placeholder="Telefone corporativo" required>
+      </div>
+
+      <button type="button" id="btnSend" value="Submit">Enviar</button>
+    </form>
+
+    <nav>
+      <ul>
+        <li> <a href="./index.html">Cadastro Simplificado de Funcionário</a></li>
+        <li> <a href="./contact.html"> Lista de Funcionários</a></li>
+      </ul>
+    </nav>
+
+  </main>
+
+
+
+  <footer>
+    <p>Desenvolvido por: Rafael Ramires</p>
+  </footer>
+
+  <script src="./scripts/script.js"></script>
+  <script src="./scripts/bussinesLogic.js"></script>
+  <script src="./scripts/uiLogic.js"></script>
+
+</body>
+
+</html>
